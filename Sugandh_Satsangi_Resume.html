@@ -1,0 +1,1989 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sugandh Satsangi · Knitwear & Sportswear Designer</title>
+<meta name="description" content="Knitwear & Sportswear Designer — NIFT Delhi '25. Performance-fabric thinking, lifestyle silhouette." />
+<script>document.documentElement.classList.add('js');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Italiana&family=Gloock&family=Crimson+Pro:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+
+<style>
+  /* ────────────────────────────────────────────────────────────
+     RESET + BASE
+     ──────────────────────────────────────────────────────────── */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  :root {
+    --sage-deep: #6B8779;
+    --sage: #8FA89B;
+    --sage-light: #C9D6CD;
+    --sage-mist: #E5EDE7;
+    --cream: #F4EFE6;
+    --off-white: #FAF7F1;
+    --ink: #2A2A2A;
+    --ink-soft: #4A4A48;
+    --body: #5C6B66;
+    --terracotta: #A84531;
+    --shadow-soft: 0 4px 24px rgba(42, 42, 42, 0.06);
+    --shadow-lift: 0 12px 36px rgba(42, 42, 42, 0.10);
+
+    --font-display: 'Italiana', serif;
+    --font-subhead: 'Gloock', serif;
+    --font-body: 'Crimson Pro', serif;
+    --font-italic: 'Instrument Serif', serif;
+    --font-mono: 'IBM Plex Mono', monospace;
+  }
+
+  body {
+    font-family: var(--font-body);
+    background: var(--cream);
+    color: var(--ink);
+    line-height: 1.5;
+    font-size: 17px;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  a { color: inherit; text-decoration: none; }
+  button { font-family: inherit; cursor: pointer; border: none; background: none; }
+
+  /* ────────────────────────────────────────────────────────────
+     LAYOUT PRIMITIVES
+     ──────────────────────────────────────────────────────────── */
+  .container {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 48px;
+  }
+
+  .section {
+    padding: 100px 0 60px;
+    position: relative;
+  }
+
+  .section-header {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+  .section-header .num {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--sage-deep);
+    letter-spacing: 0.05em;
+  }
+  .section-header .label {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--body);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  .section-header::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--sage-deep);
+    opacity: 0.4;
+  }
+
+  .section-title {
+    font-family: var(--font-display);
+    font-size: clamp(48px, 7vw, 84px);
+    line-height: 1;
+    color: var(--ink);
+    margin-bottom: 32px;
+    letter-spacing: -0.02em;
+  }
+
+  .section-lede {
+    font-family: var(--font-italic);
+    font-style: italic;
+    font-size: 20px;
+    color: var(--ink-soft);
+    max-width: 640px;
+    line-height: 1.45;
+    margin-bottom: 56px;
+  }
+
+  /* ────────────────────────────────────────────────────────────
+     TOP NAV
+     ──────────────────────────────────────────────────────────── */
+  .top-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background: rgba(244, 239, 230, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    z-index: 100;
+    border-bottom: 1px solid rgba(107, 135, 121, 0.15);
+    transition: transform 0.3s ease;
+  }
+  .top-nav .container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .nav-monogram {
+    font-family: var(--font-display);
+    font-size: 22px;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+  }
+  .nav-links {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+  }
+  .nav-links a {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--body);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    position: relative;
+    transition: color 0.2s ease;
+  }
+  .nav-links a:hover { color: var(--sage-deep); }
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px; left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--sage-deep);
+    transition: width 0.25s ease;
+  }
+  .nav-links a:hover::after { width: 100%; }
+
+  .nav-cta {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 8px 16px;
+    border: 1px solid var(--sage-deep);
+    color: var(--sage-deep);
+    border-radius: 999px;
+    transition: all 0.25s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .nav-cta:hover {
+    background: var(--sage-deep);
+    color: var(--off-white);
+  }
+  .nav-cta .arrow {
+    transition: transform 0.25s ease;
+  }
+  .nav-cta:hover .arrow { transform: translateY(2px); }
+
+  /* ────────────────────────────────────────────────────────────
+     HERO
+     ──────────────────────────────────────────────────────────── */
+  .hero {
+    min-height: 100vh;
+    padding: 140px 0 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+  }
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: end;
+  }
+
+  .hero-eyebrow {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--sage-deep);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .hero-eyebrow::before {
+    content: '';
+    width: 32px;
+    height: 1px;
+    background: var(--sage-deep);
+  }
+
+  .hero-title {
+    font-family: var(--font-display);
+    font-size: clamp(68px, 12vw, 168px);
+    line-height: 0.95;
+    color: var(--ink);
+    letter-spacing: -0.025em;
+    margin-bottom: 20px;
+  }
+  .hero-title .accent {
+    color: var(--terracotta);
+  }
+
+  .hero-subtitle {
+    font-family: var(--font-subhead);
+    font-size: 24px;
+    color: var(--ink-soft);
+    margin-bottom: 32px;
+  }
+
+  .hero-divider {
+    width: 64px;
+    height: 2px;
+    background: var(--sage-deep);
+    margin-bottom: 28px;
+  }
+
+  .hero-lede {
+    font-family: var(--font-italic);
+    font-style: italic;
+    font-size: 19px;
+    color: var(--ink-soft);
+    max-width: 480px;
+    line-height: 1.5;
+    margin-bottom: 36px;
+  }
+
+  .hero-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .meta-chip {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 8px 14px;
+    border: 1px solid var(--sage-deep);
+    color: var(--sage-deep);
+    border-radius: 999px;
+    background: transparent;
+    transition: all 0.25s ease;
+  }
+  .meta-chip.filled {
+    background: var(--sage-deep);
+    color: var(--off-white);
+  }
+  .meta-chip.terracotta {
+    border-color: var(--terracotta);
+    color: var(--terracotta);
+  }
+
+  .hero-side {
+    text-align: right;
+    align-self: end;
+    padding-bottom: 12px;
+  }
+  .hero-quote {
+    font-family: var(--font-italic);
+    font-style: italic;
+    font-size: 22px;
+    color: var(--body);
+    line-height: 1.4;
+    margin-bottom: 12px;
+  }
+  .hero-quote-attr {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    color: var(--sage-deep);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+
+  /* Animated thread SVG */
+  .thread-bg {
+    position: absolute;
+    top: 80px;
+    right: -60px;
+    width: 300px;
+    height: 600px;
+    z-index: 0;
+    opacity: 0.4;
+    pointer-events: none;
+  }
+  .thread-bg path {
+    fill: none;
+    stroke: var(--sage);
+    stroke-width: 0.8;
+    stroke-dasharray: 2000;
+    stroke-dashoffset: 2000;
+    animation: draw 3.5s ease forwards;
+  }
+  .thread-bg path:nth-child(2) { animation-delay: 0.3s; }
+  .thread-bg path:nth-child(3) { animation-delay: 0.6s; }
+  .thread-bg path:nth-child(4) { animation-delay: 0.9s; }
+  .thread-bg path:nth-child(5) { animation-delay: 1.2s; }
+
+  @keyframes draw {
+    to { stroke-dashoffset: 0; }
+  }
+
+  .scroll-cue {
+    position: absolute;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: var(--font-mono);
+    font-size: 10px;
+    color: var(--sage-deep);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    animation: float 2.5s ease-in-out infinite;
+  }
+  .scroll-cue::after {
+    content: '';
+    width: 1px;
+    height: 32px;
+    background: var(--sage-deep);
+  }
+  @keyframes float {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(6px); }
+  }
+
+  /* ────────────────────────────────────────────────────────────
+     ABOUT — feature stats
+     ──────────────────────────────────────────────────────────── */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+  .about-prose p {
+    font-size: 19px;
+    line-height: 1.6;
+    color: var(--ink-soft);
+    margin-bottom: 20px;
+  }
+  .about-prose p:first-child::first-letter {
+    font-family: var(--font-display);
+    font-size: 64px;
+    line-height: 1;
+    float: left;
+    margin: 4px 12px 0 0;
+    color: var(--terracotta);
+  }
+
+  .stats-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .stat-card {
+    border-left: 2px solid var(--sage-deep);
+    padding: 4px 0 4px 20px;
+    transition: border-color 0.2s, padding-left 0.2s;
+  }
+  .stat-card:hover {
+    border-left-color: var(--terracotta);
+    padding-left: 24px;
+  }
+  .stat-num {
+    font-family: var(--font-display);
+    font-size: 56px;
+    line-height: 1;
+    color: var(--ink);
+    margin-bottom: 4px;
+  }
+  .stat-label {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--sage-deep);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .stat-detail {
+    font-family: var(--font-body);
+    font-size: 14px;
+    color: var(--body);
+    font-style: italic;
+  }
+
+  /* ────────────────────────────────────────────────────────────
+     EXPERIENCE TIMELINE
+     ──────────────────────────────────────────────────────────── */
+  .timeline {
+    position: relative;
+    padding-left: 0;
+  }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 100px;
+    width: 1px;
+    background: var(--sage-deep);
+    opacity: 0.25;
+  }
+
+  .role-card {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 48px;
+    padding: 32px 0;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(107, 135, 121, 0.12);
+    transition: padding 0.3s ease;
+    position: relative;
+  }
+  .role-card:hover {
+    padding-left: 12px;
+  }
+  .role-card:hover .role-company {
+    color: var(--sage-deep);
+  }
+
+  .role-card::before {
+    content: '';
+    position: absolute;
+    left: 96px;
+    top: 44px;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--cream);
+    border: 1.5px solid var(--sage-deep);
+    transition: all 0.3s ease;
+  }
+  .role-card:hover::before {
+    background: var(--terracotta);
+    border-color: var(--terracotta);
+    transform: scale(1.3);
+  }
+  .role-card.current::before {
+    background: var(--sage-deep);
+  }
+
+  .role-date-col {
+    text-align: right;
+    padding-top: 4px;
+  }
+  .role-dates {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--sage-deep);
+    letter-spacing: 0.05em;
+    margin-bottom: 4px;
+  }
+  .role-location {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    color: var(--body);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  .role-content { padding-left: 36px; }
+
+  .role-company {
+    font-family: var(--font-display);
+    font-size: 38px;
+    line-height: 1.05;
+    color: var(--ink);
+    margin-bottom: 6px;
+    transition: color 0.25s ease;
+    letter-spacing: -0.01em;
+  }
+  .role-title {
+    font-family: var(--font-italic);
+    font-style: italic;
+    font-size: 18px;
+    color: var(--body);
+    margin-bottom: 20px;
+  }
+  .role-bullets {
+    list-style: none;
+    padding: 0;
+  }
+  .role-bullets li {
+    position: relative;
+    padding-left: 22px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    line-height: 1.55;
+    color: var(--ink-soft);
+  }
+  .role-bullets li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 11px;
+    width: 6px;
+    height: 6px;
+    background: var(--sage-deep);
+    border-radius: 50%;
+  }
+  .role-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 16px;
+  }
+  .role-tag {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    color: var(--sage-deep);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    background: var(--sage-mist);
+    border-radius: 4px;
+  }
+
+  /* ────────────────────────────────────────────────────────────
+     SKILLS GRID
+     ──────────────────────────────────────────────────────────── */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 56px;
+  }
+  .skill-block h3 {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--sage-deep);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--sage-deep);
+  }
+
+  .chip-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .chip {
+    font-family: var(--font-body);
+    font-size: 14px;
+    padding: 8px 14px;
+    background: transparent;
+    border: 1px solid var(--sage-deep);
+    color: var(--ink-soft);
+    border-radius: 999px;
+    transition: all 0.2s ease;
+    cursor: default;
+  }
+  .chip:hover {
+    background: var(--sage-deep);
+    color: var(--off-white);
+    transform: translateY(-2px);
+  }
+
+  .lang-list {
+    list-style: none;
+  }
+  .lang-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 12px 0;
+    border-bottom: 1px dashed rgba(107, 135, 121, 0.25);
+  }
+  .lang-name {
+    font-family: var(--font-subhead);
+    font-size: 16px;
+    color: var(--ink);
+  }
+  .lang-level {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    color: var(--body);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  /* ────────────────────────────────────────────────────────────
+     EDUCATION + RESEARCH
+     ──────────────────────────────────────────────────────────── */
+  .edu-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 56px;
+  }
+  .edu-card {
+    background: var(--off-white);
+    border-left: 3px solid var(--sage-deep);
+    padding: 32px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  .edu-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lift);
+  }
+  .edu-degree {
+    font-family: var(--font-display);
+    font-size: 32px;
+    color: var(--ink);
+    line-height: 1.1;
+    margin-bottom: 8px;
+  }
+  .edu-school {
+    font-family: var(--font-subhead);
+    font-size: 16px;
+    color: var(--ink-soft);
+    margin-bottom: 4px;
+  }
+  .edu-years {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--sage-deep);
+    letter-spacing: 0.1em;
+    margin-bottom: 24px;
+  }
+  .edu-spec {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    gap: 8px 16px;
+    align-items: baseline;
+  }
+  .edu-spec dt {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    color: var(--sage-deep);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding-top: 4px;
+  }
+  .edu-spec dd {
+    font-family: var(--font-body);
+    font-size: 16px;
+    color: var(--ink);
+  }
+
+  .research-list { display: flex; flex-direction: column; gap: 24px; }
+  .research-item {
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(107, 135, 121, 0.15);
+  }
+  .research-item:last-child { border-bottom: none; }
+  .research-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 6px;
+    gap: 12px;
+  }
+  .research-title {
+    font-family: var(--font-display);
+    font-size: 24px;
+    color: var(--ink);
+  }
+  .research-place {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    color: var(--sage-deep);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  .research-desc {
+    font-family: var(--font-italic);
+    font-style: italic;
+    font-size: 15px;
+    color: var(--body);
+  }
+
+  /* ────────────────────────────────────────────────────────────
+     CONTACT / FOOTER
+     ──────────────────────────────────────────────────────────── */
+  .contact-section {
+    background: var(--sage-deep);
+    color: var(--off-white);
+    padding: 120px 0 80px;
+    margin-top: 80px;
+    position: relative;
+    overflow: hidden;
+  }
+  .contact-section .section-header .num,
+  .contact-section .section-header .label {
+    color: var(--sage-light);
+  }
+  .contact-section .section-header::after {
+    background: var(--sage-light);
+  }
+  .contact-section .section-title {
+    color: var(--off-white);
+  }
+  .contact-section .section-lede {
+    color: var(--sage-light);
+  }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-top: 40px;
+  }
+  .contact-item {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 24px 28px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    position: relative;
+    text-align: left;
+    width: 100%;
+    display: block;
+  }
+  .contact-item:hover {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-3px);
+  }
+  .contact-label {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    color: var(--sage-light);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    display: block;
+  }
+  .contact-value {
+    font-family: var(--font-subhead);
+    font-size: 22px;
+    color: var(--off-white);
+    word-break: break-all;
+  }
+  .contact-item .copy-cue {
+    position: absolute;
+    top: 24px;
+    right: 28px;
+    font-family: var(--font-mono);
+    font-size: 9px;
+    color: var(--sage-light);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+  .contact-item:hover .copy-cue { opacity: 0.6; }
+  .contact-item.copied .copy-cue { opacity: 1; color: var(--off-white); }
+
+  .footer-rail {
+    margin-top: 80px;
+    padding-top: 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .footer-passion {
+    font-family: var(--font-italic);
+    font-style: italic;
+    font-size: 16px;
+    color: var(--sage-light);
+    max-width: 600px;
+  }
+  .footer-meta {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    color: var(--sage-light);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    opacity: 0.7;
+  }
+
+  /* ────────────────────────────────────────────────────────────
+     SCROLL ANIMATIONS — only apply when JS is confirmed working
+     ──────────────────────────────────────────────────────────── */
+  .js .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .js .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .js .reveal.delay-1 { transition-delay: 0.1s; }
+  .js .reveal.delay-2 { transition-delay: 0.2s; }
+  .js .reveal.delay-3 { transition-delay: 0.3s; }
+
+  /* ────────────────────────────────────────────────────────────
+     SCROLL PROGRESS BAR
+     ──────────────────────────────────────────────────────────── */
+  .scroll-progress {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--sage-deep), var(--terracotta));
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    z-index: 101;
+    pointer-events: none;
+    will-change: transform;
+  }
+
+  /* ────────────────────────────────────────────────────────────
+     SKIP LINK (a11y)
+     ──────────────────────────────────────────────────────────── */
+  .skip-link {
+    position: fixed;
+    top: -200px;
+    left: 16px;
+    padding: 12px 18px;
+    background: var(--ink);
+    color: var(--off-white);
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border-radius: 6px;
+    z-index: 200;
+    transition: top 0.2s ease;
+  }
+  .skip-link:focus {
+    top: 12px;
+    outline: 2px solid var(--terracotta);
+    outline-offset: 2px;
+  }
+
+  /* ────────────────────────────────────────────────────────────
+     HAMBURGER MENU TOGGLE
+     ──────────────────────────────────────────────────────────── */
+  .nav-toggle {
+    display: none;
+    width: 42px;
+    height: 42px;
+    position: relative;
+    border-radius: 50%;
+    transition: background 0.2s ease;
+    margin-left: 8px;
+    flex-shrink: 0;
+  }
+  .nav-toggle:hover { background: rgba(107, 135, 121, 0.10); }
+  .nav-toggle:focus-visible {
+    outline: 2px solid var(--sage-deep);
+    outline-offset: 2px;
+  }
+  .nav-toggle span {
+    display: block;
+    position: absolute;
+    left: 8px;
+    width: 20px;
+    height: 1.5px;
+    background: var(--ink);
+    border-radius: 2px;
+    transition: top 0.3s ease, transform 0.3s ease, opacity 0.2s ease;
+  }
+  .nav-toggle span { left: 11px; }
+  .nav-toggle span:nth-child(1) { top: 15px; }
+  .nav-toggle span:nth-child(2) { top: 20px; }
+  .nav-toggle span:nth-child(3) { top: 25px; }
+  .nav-toggle[aria-expanded="true"] span:nth-child(1) { top: 20px; transform: rotate(45deg); }
+  .nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+  .nav-toggle[aria-expanded="true"] span:nth-child(3) { top: 20px; transform: rotate(-45deg); }
+
+  /* Active nav-link state */
+  .nav-links a.active { color: var(--ink); }
+  .nav-links a.active::after { width: 100%; }
+
+  /* ────────────────────────────────────────────────────────────
+     BACK TO TOP
+     ──────────────────────────────────────────────────────────── */
+  .back-to-top {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--sage-deep);
+    color: var(--off-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-lift);
+    z-index: 90;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(12px) scale(0.9);
+    transition: opacity 0.3s ease, transform 0.3s ease, background 0.2s ease;
+    font-family: var(--font-mono);
+    font-size: 18px;
+    line-height: 1;
+  }
+  .back-to-top.visible {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0) scale(1);
+  }
+  .back-to-top:hover {
+    background: var(--terracotta);
+    transform: translateY(-3px) scale(1.05);
+  }
+  .back-to-top:focus-visible {
+    outline: 2px solid var(--terracotta);
+    outline-offset: 4px;
+  }
+
+  /* ────────────────────────────────────────────────────────────
+     ENHANCED HOVER + ENTRANCE ANIMATIONS
+     ──────────────────────────────────────────────────────────── */
+  .hero-title .accent {
+    display: inline-block;
+    animation: pulse-dot 2.4s ease-in-out infinite;
+  }
+  @keyframes pulse-dot {
+    0%, 100% { transform: translateY(0); opacity: 1; }
+    50% { transform: translateY(-6px); opacity: 0.7; }
+  }
+
+  .stat-card .stat-num {
+    transition: transform 0.3s ease, color 0.3s ease;
+    display: inline-block;
+  }
+  .stat-card:hover .stat-num {
+    transform: translateX(4px);
+    color: var(--terracotta);
+  }
+
+  .role-card { cursor: default; }
+
+  .meta-chip { cursor: default; }
+  .meta-chip:not(.filled):hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-soft);
+  }
+  .meta-chip:not(.filled):not(.terracotta):hover {
+    background: var(--sage-deep);
+    color: var(--off-white);
+  }
+  .meta-chip.terracotta:hover {
+    background: var(--terracotta);
+    color: var(--off-white);
+  }
+
+  .role-tag {
+    transition: background 0.2s, color 0.2s, transform 0.2s;
+    cursor: default;
+  }
+  .role-tag:hover {
+    background: var(--sage-deep);
+    color: var(--off-white);
+    transform: translateY(-1px);
+  }
+
+  .edu-card { will-change: transform; }
+
+  /* Hero entrance — staggered rise */
+  .js .hero-eyebrow,
+  .js .hero-title,
+  .js .hero-divider,
+  .js .hero-subtitle,
+  .js .hero-lede,
+  .js .hero-meta,
+  .js .hero-quote,
+  .js .hero-quote-attr {
+    opacity: 0;
+    transform: translateY(22px);
+    animation: hero-rise 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) forwards;
+  }
+  .js .hero-eyebrow    { animation-delay: 0.10s; }
+  .js .hero-title      { animation-delay: 0.25s; }
+  .js .hero-divider    { animation-delay: 0.55s; }
+  .js .hero-subtitle   { animation-delay: 0.65s; }
+  .js .hero-lede       { animation-delay: 0.75s; }
+  .js .hero-meta       { animation-delay: 0.85s; }
+  .js .hero-quote      { animation-delay: 0.95s; }
+  .js .hero-quote-attr { animation-delay: 1.05s; }
+  @keyframes hero-rise {
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Section title shimmer on hover */
+  .section-title {
+    transition: letter-spacing 0.4s ease;
+  }
+  .section-title:hover {
+    letter-spacing: 0;
+  }
+
+  /* ────────────────────────────────────────────────────────────
+     THREAD CURSOR (desktop only — JS adds .thread-cursor on <html>)
+     ──────────────────────────────────────────────────────────── */
+  .thread-cursor-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 9999;
+  }
+  .thread-cursor,
+  .thread-cursor body,
+  .thread-cursor a,
+  .thread-cursor button,
+  .thread-cursor .chip,
+  .thread-cursor .meta-chip,
+  .thread-cursor .role-tag,
+  .thread-cursor .stat-card,
+  .thread-cursor .role-card,
+  .thread-cursor .edu-card,
+  .thread-cursor .contact-item,
+  .thread-cursor .nav-toggle,
+  .thread-cursor input,
+  .thread-cursor textarea,
+  .thread-cursor [role="button"] {
+    cursor: none !important;
+  }
+
+  /* Respect reduced-motion preferences */
+  @media (prefers-reduced-motion: reduce) {
+    .js .reveal { opacity: 1; transform: none; transition: none; }
+    .thread-bg path { animation: none; stroke-dashoffset: 0; }
+    .scroll-cue { animation: none; }
+    .hero-title .accent { animation: none; }
+    .js .hero-eyebrow,
+    .js .hero-title,
+    .js .hero-divider,
+    .js .hero-subtitle,
+    .js .hero-lede,
+    .js .hero-meta,
+    .js .hero-quote,
+    .js .hero-quote-attr {
+      opacity: 1;
+      transform: none;
+      animation: none;
+    }
+  }
+
+  /* ────────────────────────────────────────────────────────────
+     RESPONSIVE
+     ──────────────────────────────────────────────────────────── */
+  @media (max-width: 1100px) {
+    .container { padding: 0 36px; }
+    .about-grid { gap: 56px; }
+    .skills-grid { gap: 40px; }
+  }
+
+  @media (max-width: 900px) {
+    .container { padding: 0 28px; }
+    .hero { padding: 110px 0 70px; min-height: auto; }
+    .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+    .hero-side { text-align: left; padding-bottom: 0; }
+    .about-grid { grid-template-columns: 1fr; gap: 48px; }
+    .skills-grid { grid-template-columns: 1fr; gap: 40px; }
+    .edu-grid { grid-template-columns: 1fr; gap: 32px; }
+    .timeline::before { left: 0; }
+    .role-card {
+      grid-template-columns: 1fr;
+      gap: 12px;
+      padding-left: 24px;
+    }
+    .role-card:hover { padding-left: 24px; }
+    .role-card::before { left: -4px; top: 38px; }
+    .role-date-col { text-align: left; padding-top: 0; }
+    .role-content { padding-left: 0; }
+    .role-company { font-size: 30px; }
+    .contact-grid { grid-template-columns: 1fr; }
+    .section { padding: 64px 0 40px; }
+    .scroll-cue { display: none; }
+    .thread-bg { right: -120px; opacity: 0.25; }
+
+    /* Mobile nav */
+    .nav-toggle { display: block; }
+    .nav-cta { margin-left: auto; }
+    .nav-links {
+      position: fixed;
+      top: 60px;
+      left: 0;
+      right: 0;
+      flex-direction: column;
+      align-items: stretch;
+      background: rgba(244, 239, 230, 0.97);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      padding: 12px 28px 24px;
+      gap: 0;
+      border-bottom: 1px solid rgba(107, 135, 121, 0.15);
+      transform: translateY(-110%);
+      transition: transform 0.35s cubic-bezier(0.2, 0.7, 0.2, 1);
+      box-shadow: var(--shadow-soft);
+      visibility: hidden;
+    }
+    .nav-links.open {
+      transform: translateY(0);
+      visibility: visible;
+    }
+    .nav-links li {
+      border-bottom: 1px dashed rgba(107, 135, 121, 0.20);
+    }
+    .nav-links li:last-child { border-bottom: none; }
+    .nav-links a {
+      display: block;
+      padding: 16px 0;
+      font-size: 12px;
+    }
+    .nav-links a::after { display: none; }
+  }
+
+  @media (max-width: 600px) {
+    .container { padding: 0 20px; }
+    body { font-size: 16px; }
+    .hero { padding: 100px 0 60px; }
+    .section { padding: 56px 0 32px; }
+    .section-title { font-size: clamp(40px, 11vw, 64px); margin-bottom: 24px; }
+    .section-lede { font-size: 17px; margin-bottom: 36px; }
+    .section-header { gap: 12px; margin-bottom: 32px; }
+    .hero-title { font-size: clamp(54px, 16vw, 96px); }
+    .hero-subtitle { font-size: 19px; }
+    .hero-lede { font-size: 17px; }
+    .hero-quote { font-size: 19px; }
+    .about-prose p { font-size: 17px; }
+    .about-prose p:first-child::first-letter { font-size: 52px; margin-right: 8px; }
+    .stat-num { font-size: 44px; }
+    .role-company { font-size: 26px; }
+    .role-title { font-size: 16px; }
+    .role-bullets li { font-size: 15px; }
+    .edu-card { padding: 24px; }
+    .edu-degree { font-size: 26px; }
+    .research-title { font-size: 20px; }
+    .research-head { flex-wrap: wrap; gap: 4px; }
+    .contact-section { padding: 80px 0 60px; }
+    .contact-item { padding: 20px 22px; }
+    .contact-value { font-size: 18px; }
+    .contact-item .copy-cue { top: 20px; right: 22px; }
+    .nav-cta { padding: 6px 12px; font-size: 10px; }
+    .footer-rail {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 18px;
+    }
+    .stat-card { padding-left: 16px; }
+    .back-to-top {
+      bottom: 18px;
+      right: 18px;
+      width: 42px;
+      height: 42px;
+      font-size: 16px;
+    }
+  }
+
+  @media (max-width: 380px) {
+    .container { padding: 0 16px; }
+    .hero-title { font-size: clamp(44px, 18vw, 72px); }
+    .hero-eyebrow { font-size: 11px; }
+    .hero-eyebrow::before { width: 20px; }
+    .nav-cta .nav-cta-text { display: none; }
+    .nav-cta { padding: 6px 10px; gap: 0; }
+    .nav-monogram { font-size: 19px; }
+    .hero-meta { gap: 8px; }
+    .meta-chip { font-size: 10px; padding: 6px 10px; }
+    .section-title { font-size: clamp(36px, 12vw, 56px); }
+  }
+
+  @media (hover: none) {
+    .role-card:hover { padding-left: 0; }
+    .stat-card:hover { padding-left: 20px; }
+    .chip:hover { transform: none; }
+  }
+
+  /* ────────────────────────────────────────────────────────────
+     PRINT
+     ──────────────────────────────────────────────────────────── */
+  @media print {
+    .top-nav, .scroll-cue, .thread-bg { display: none; }
+    body { background: white; font-size: 12px; }
+    .section { padding: 30px 0 20px; page-break-inside: avoid; }
+    .hero { min-height: auto; padding: 30px 0; }
+    .role-card { page-break-inside: avoid; }
+    .reveal { opacity: 1; transform: none; }
+  }
+</style>
+</head>
+
+<body>
+
+<a class="skip-link" href="#about">Skip to content</a>
+<div class="scroll-progress" aria-hidden="true"></div>
+
+<!-- ───── TOP NAV ───── -->
+<nav class="top-nav" aria-label="Primary">
+  <div class="container">
+    <a href="#top" class="nav-monogram" aria-label="Sugandh Satsangi — top">SS.</a>
+    <ul class="nav-links" id="primary-nav">
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="./Sugandh_Satsangi_Resume.pdf" download class="nav-cta" aria-label="Download CV">
+      <span class="nav-cta-text">Download </span>CV<span class="arrow" aria-hidden="true"> ↓</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ───── HERO ───── -->
+<header class="hero" id="top">
+  <svg class="thread-bg" viewBox="0 0 300 600" preserveAspectRatio="none">
+    <path d="M -50 80  C 80 130, 180 60, 320 100" />
+    <path d="M -50 180 C 70 240, 200 150, 320 220" />
+    <path d="M -50 280 C 90 340, 170 270, 320 340" />
+    <path d="M -50 380 C 80 440, 200 360, 320 440" />
+    <path d="M -50 480 C 60 540, 180 460, 320 540" />
+  </svg>
+
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-main">
+        <div class="hero-eyebrow">A KNITWEAR & SPORTSWEAR DESIGN PRACTICE</div>
+        <h1 class="hero-title">Sugandh<br>Satsangi<span class="accent">.</span></h1>
+        <div class="hero-divider"></div>
+        <div class="hero-subtitle">Knitwear & Sportswear Designer</div>
+        <p class="hero-lede">
+          Building performance-grade fabric thinking into contemporary fashion.
+          End-to-end product development, from concept to sampled prototype.
+        </p>
+        <div class="hero-meta">
+          <span class="meta-chip filled">NIFT '25 · Delhi</span>
+          <span class="meta-chip">Sportswear for Training</span>
+          <span class="meta-chip terracotta">Open to opportunities</span>
+        </div>
+      </div>
+
+      <aside class="hero-side">
+        <p class="hero-quote">
+          "where performance<br>meets storytelling."
+        </p>
+        <div class="hero-quote-attr">— DESIGN PHILOSOPHY</div>
+      </aside>
+    </div>
+  </div>
+
+  <div class="scroll-cue">scroll</div>
+</header>
+
+<!-- ───── ABOUT ───── -->
+<section class="section" id="about">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="num">01</span>
+      <span class="label">About</span>
+    </div>
+    <h2 class="section-title reveal">About.</h2>
+
+    <div class="about-grid">
+      <div class="about-prose reveal delay-1">
+        <p>
+          A knitwear designer with a sportswear-for-training specialisation
+          from NIFT Delhi. The practice balances aesthetics with functionality
+          across performance wear, athleisure & lifestyle apparel — bringing
+          athletic-grade fabric thinking to a contemporary brief.
+        </p>
+        <p>
+          Strong end-to-end ownership: concept ideation, design detailing,
+          tech pack development, sampling coordination — through to a finished
+          prototype that holds up against fabric weight, print fastness, and
+          production scalability.
+        </p>
+        <p>
+          Adaptable, detail-oriented, quick to learn. I thrive in
+          cross-functional teams and dynamic environments where I can
+          contribute meaningfully at every stage of product development.
+        </p>
+      </div>
+
+      <div class="stats-stack reveal delay-2">
+        <div class="stat-card">
+          <div class="stat-num" data-count="4" data-pad="2">04</div>
+          <div class="stat-label">Industry Engagements</div>
+          <div class="stat-detail">Sportswear · Fashion · Lifestyle · Home</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num" data-count="6" data-pad="2" data-suffix="+">06+</div>
+          <div class="stat-label">Print Stories Developed</div>
+          <div class="stat-detail">Screen print & sublimation capsules</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num" data-count="2" data-pad="2">02</div>
+          <div class="stat-label">Craft Cluster Studies</div>
+          <div class="stat-detail">Zardozi · Ahmedabad / Ajrakh · Bhuj</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num" data-count="50" data-suffix="+">50+</div>
+          <div class="stat-label">Designs Delivered</div>
+          <div class="stat-detail">Across collection cycles & buyer cycles</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───── EXPERIENCE ───── -->
+<section class="section" id="experience">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="num">02</span>
+      <span class="label">Experience</span>
+    </div>
+    <h2 class="section-title reveal">Experience.</h2>
+    <p class="section-lede reveal delay-1">
+      Four industry roles. Two collection cycles. Sportswear, lifestyle,
+      kidswear & home — every brief carrying through from concept to sample.
+    </p>
+
+    <div class="timeline">
+
+      <article class="role-card current reveal">
+        <div class="role-date-col">
+          <div class="role-dates">Oct 2025 — Present</div>
+          <div class="role-location">Jalandhar, IN</div>
+        </div>
+        <div class="role-content">
+          <h3 class="role-company">Shrey Sports</h3>
+          <div class="role-title">Knitwear &amp; Sportswear Designer</div>
+          <ul class="role-bullets">
+            <li>Built core range across performance wear, athleisure &amp; activewear, aligned with brand positioning and market requirements.</li>
+            <li>Led sport-specific design — prioritising functionality, technical performance, fabric-trim selection and manufacturability.</li>
+            <li>Owned end-to-end product development from ideation through detailed execution and sampling, on timeline and on quality.</li>
+          </ul>
+          <div class="role-tags">
+            <span class="role-tag">Performance Wear</span>
+            <span class="role-tag">Athleisure</span>
+            <span class="role-tag">Activewear</span>
+            <span class="role-tag">Sampling</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="role-card reveal">
+        <div class="role-date-col">
+          <div class="role-dates">Jun 2025 — Sep 2025</div>
+          <div class="role-location">Furniture &amp; Lighting</div>
+        </div>
+        <div class="role-content">
+          <h3 class="role-company">Osmic Glass Pvt. Ltd.</h3>
+          <div class="role-title">Product Designer · Sagebrook Home</div>
+          <ul class="role-bullets">
+            <li>Executed end-to-end sampling for Sagebrook Home across furniture and lighting categories.</li>
+            <li>Coordinated with design, sourcing &amp; production teams to translate concepts into manufacturable prototypes.</li>
+          </ul>
+          <div class="role-tags">
+            <span class="role-tag">Home Goods</span>
+            <span class="role-tag">Cross-functional</span>
+            <span class="role-tag">Prototype Dev</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="role-card reveal">
+        <div class="role-date-col">
+          <div class="role-dates">Jan 2025 — Apr 2025</div>
+          <div class="role-location">Sportswear / Kidswear</div>
+        </div>
+        <div class="role-content">
+          <h3 class="role-company">Sportskin International</h3>
+          <div class="role-title">Sportswear Designer · Intern</div>
+          <ul class="role-bullets">
+            <li>Contributed to two flagship collections: adaptive sportswear (ergonomics, performance) and football jerseys (teamwear aesthetics).</li>
+            <li>Developed kidswear collections balancing innovation with comfort, durability and usability.</li>
+            <li>Assisted across product development — concept, design detailing, and sampling coordination.</li>
+          </ul>
+          <div class="role-tags">
+            <span class="role-tag">Adaptive Sportswear</span>
+            <span class="role-tag">Football Jerseys</span>
+            <span class="role-tag">Kidswear</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="role-card reveal">
+        <div class="role-date-col">
+          <div class="role-dates">Jul 2024 — Sep 2024</div>
+          <div class="role-location">Womenswear / Denim</div>
+        </div>
+        <div class="role-content">
+          <h3 class="role-company">Paragon Apparels</h3>
+          <div class="role-title">Design &amp; Merchandising · ONLY (Bestseller Group)</div>
+          <ul class="role-bullets">
+            <li>Supported design and merchandising for ONLY, aligning with global fashion standards and brand positioning.</li>
+            <li>Prepared detailed tech packs — fabric, trims, fits and garment construction specs.</li>
+            <li>Coordinated with sampling and production teams for prototype tracking, timelines and quality benchmarks.</li>
+          </ul>
+          <div class="role-tags">
+            <span class="role-tag">Tech Packs</span>
+            <span class="role-tag">Merchandising</span>
+            <span class="role-tag">ONLY · Bestseller</span>
+            <span class="role-tag">Buyer Coordination</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ───── SKILLS ───── -->
+<section class="section" id="skills">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="num">03</span>
+      <span class="label">Skills &amp; Tools</span>
+    </div>
+    <h2 class="section-title reveal">Skills.</h2>
+
+    <div class="skills-grid">
+      <div class="skill-block reveal">
+        <h3>Design Practice</h3>
+        <div class="chip-cloud">
+          <span class="chip">Knitwear Design</span>
+          <span class="chip">Sportswear Design</span>
+          <span class="chip">Fashion Design</span>
+          <span class="chip">Tech Pack Development</span>
+          <span class="chip">Surface Development</span>
+          <span class="chip">Print &amp; Pattern</span>
+          <span class="chip">Embroidery</span>
+          <span class="chip">Merchandising</span>
+        </div>
+      </div>
+
+      <div class="skill-block reveal delay-1">
+        <h3>Software &amp; Tools</h3>
+        <div class="chip-cloud">
+          <span class="chip">Adobe Illustrator</span>
+          <span class="chip">Adobe Photoshop</span>
+          <span class="chip">Adobe InDesign</span>
+          <span class="chip">Adobe Spark</span>
+          <span class="chip">Photography</span>
+          <span class="chip">Visual Layout</span>
+        </div>
+
+        <h3 style="margin-top: 32px;">Languages</h3>
+        <ul class="lang-list">
+          <li><span class="lang-name">English</span><span class="lang-level">Fluent</span></li>
+          <li><span class="lang-name">Hindi</span><span class="lang-level">Native</span></li>
+          <li><span class="lang-name">Punjabi</span><span class="lang-level">Conversational</span></li>
+        </ul>
+      </div>
+
+      <div class="skill-block reveal delay-2">
+        <h3>Soft Skills</h3>
+        <div class="chip-cloud">
+          <span class="chip">Concept-to-execution Ownership</span>
+          <span class="chip">Cross-functional Collaboration</span>
+          <span class="chip">Problem Solving</span>
+          <span class="chip">Adaptability</span>
+          <span class="chip">Writing &amp; Communication</span>
+          <span class="chip">Detail Orientation</span>
+          <span class="chip">Quick Learner</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───── EDUCATION + RESEARCH ───── -->
+<section class="section" id="education">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="num">04</span>
+      <span class="label">Education &amp; Research</span>
+    </div>
+    <h2 class="section-title reveal">Education.</h2>
+
+    <div class="edu-grid">
+      <article class="edu-card reveal">
+        <div class="edu-degree">B.Des Knitwear Design</div>
+        <div class="edu-school">National Institute of Fashion Technology (NIFT)</div>
+        <div class="edu-school">Delhi</div>
+        <div class="edu-years">2021 — 2025</div>
+        <dl class="edu-spec">
+          <dt>Major</dt>
+          <dd>Sportswear for Training</dd>
+          <dt>Minor</dt>
+          <dd>Applications for Fashion Business</dd>
+        </dl>
+      </article>
+
+      <div class="reveal delay-1">
+        <h3 style="font-family: var(--font-mono); font-size: 11px; color: var(--sage-deep); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 16px; padding-bottom: 8px; border-bottom: 1px solid var(--sage-deep);">
+          Field Research &amp; Leadership
+        </h3>
+        <div class="research-list">
+          <article class="research-item">
+            <div class="research-head">
+              <span class="research-title">Zardozi Craft Research</span>
+              <span class="research-place">Ahmedabad</span>
+            </div>
+            <p class="research-desc">In-depth process documentation &amp; cultural analysis of traditional craft practices.</p>
+          </article>
+          <article class="research-item">
+            <div class="research-head">
+              <span class="research-title">Ajrakh Block Printing</span>
+              <span class="research-place">Bhuj</span>
+            </div>
+            <p class="research-desc">Innovative jacket development with full process documentation of Ajrakh.</p>
+          </article>
+          <article class="research-item">
+            <div class="research-head">
+              <span class="research-title">Literary Club</span>
+              <span class="research-place">NIFT Delhi · Core Team</span>
+            </div>
+            <p class="research-desc">Drove club engagement through social media campaigns and digital content.</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───── CONTACT ───── -->
+<section class="contact-section" id="contact">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="num">05</span>
+      <span class="label">Get in touch</span>
+    </div>
+    <h2 class="section-title reveal">Let's talk.</h2>
+    <p class="section-lede reveal delay-1">
+      Open to opportunities in sportswear, knitwear, athleisure & merchandising —
+      full-time, freelance, or collaborative briefs. Tap any card to copy.
+    </p>
+
+    <div class="contact-grid">
+      <button class="contact-item reveal" data-copy="satsangisugandh8@gmail.com">
+        <span class="contact-label">Email</span>
+        <span class="contact-value">satsangisugandh8@gmail.com</span>
+        <span class="copy-cue">click to copy</span>
+      </button>
+
+      <button class="contact-item reveal delay-1" data-copy="+91 8306582266">
+        <span class="contact-label">Phone</span>
+        <span class="contact-value">+91 8306 582 266</span>
+        <span class="copy-cue">click to copy</span>
+      </button>
+
+      <a class="contact-item reveal delay-2"
+         href="https://www.linkedin.com/in/sugandh-satsangi-285304200"
+         target="_blank" rel="noopener">
+        <span class="contact-label">LinkedIn</span>
+        <span class="contact-value">/in/sugandh-satsangi</span>
+        <span class="copy-cue">open profile →</span>
+      </a>
+
+      <a class="contact-item reveal delay-3"
+         href="https://www.behance.net/sugandhsatsangi"
+         target="_blank" rel="noopener">
+        <span class="contact-label">Behance · Portfolio</span>
+        <span class="contact-value">/sugandhsatsangi</span>
+        <span class="copy-cue">view work →</span>
+      </a>
+    </div>
+
+    <div class="footer-rail">
+      <p class="footer-passion">
+        Passionate about sustainable fashion, functional sportswear &amp;
+        storytelling through design.
+      </p>
+      <span class="footer-meta">© 2026 · Sugandh Satsangi · Jalandhar, IN</span>
+    </div>
+  </div>
+</section>
+
+<button class="back-to-top" type="button" aria-label="Back to top">↑</button>
+
+<script>
+(function () {
+  'use strict';
+
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const canHover = window.matchMedia('(hover: hover)').matches;
+
+  // ───── Scroll-triggered reveal ─────
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.12, rootMargin: '0px 0px -60px 0px' }
+  );
+  document.querySelectorAll('.reveal').forEach((el) => revealObserver.observe(el));
+
+  // ───── Animated stat counters ─────
+  const easeOut = (t) => 1 - Math.pow(1 - t, 3);
+  function setStatText(el, value) {
+    const pad = parseInt(el.dataset.pad || '0', 10);
+    const suffix = el.dataset.suffix || '';
+    const padded = pad > 0 ? String(value).padStart(pad, '0') : String(value);
+    el.textContent = padded + suffix;
+  }
+  function animateCount(el) {
+    const target = parseInt(el.dataset.count, 10);
+    if (Number.isNaN(target)) return;
+    const duration = 1200;
+    const start = performance.now();
+    function step(now) {
+      const t = Math.min((now - start) / duration, 1);
+      setStatText(el, Math.round(target * easeOut(t)));
+      if (t < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+  const countObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        animateCount(entry.target);
+        countObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+  document.querySelectorAll('[data-count]').forEach((el) => {
+    if (reduced) return;
+    setStatText(el, 0);
+    countObserver.observe(el);
+  });
+
+  // ───── Click-to-copy contact info ─────
+  document.querySelectorAll('.contact-item[data-copy]').forEach((btn) => {
+    btn.addEventListener('click', async () => {
+      const text = btn.dataset.copy;
+      const cue = btn.querySelector('.copy-cue');
+      const original = cue ? cue.textContent : '';
+      try {
+        await navigator.clipboard.writeText(text);
+        btn.classList.add('copied');
+        if (cue) cue.textContent = 'copied ✓';
+      } catch (err) {
+        const range = document.createRange();
+        range.selectNode(btn);
+        const sel = window.getSelection();
+        sel.removeAllRanges();
+        sel.addRange(range);
+        btn.classList.add('copied');
+        if (cue) cue.textContent = 'select & copy';
+      }
+      setTimeout(() => {
+        btn.classList.remove('copied');
+        if (cue) cue.textContent = original;
+      }, 2000);
+    });
+  });
+
+  // ───── Mobile nav ─────
+  const navToggle = document.querySelector('.nav-toggle');
+  const navLinksEl = document.querySelector('.nav-links');
+  function closeMenu() {
+    if (!navToggle || !navLinksEl) return;
+    navToggle.setAttribute('aria-expanded', 'false');
+    navLinksEl.classList.remove('open');
+  }
+  if (navToggle && navLinksEl) {
+    navToggle.addEventListener('click', () => {
+      const open = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', String(!open));
+      navLinksEl.classList.toggle('open', !open);
+    });
+    navLinksEl.querySelectorAll('a').forEach((a) => {
+      a.addEventListener('click', closeMenu);
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeMenu();
+    });
+  }
+
+  // ───── Active nav section highlight ─────
+  const sectionMap = new Map();
+  document.querySelectorAll('section[id], header[id]').forEach((sec) => {
+    const link = document.querySelector('.nav-links a[href="#' + sec.id + '"]');
+    if (link) sectionMap.set(sec, link);
+  });
+  if (sectionMap.size > 0) {
+    const navObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        const link = sectionMap.get(entry.target);
+        if (!link) return;
+        if (entry.isIntersecting) {
+          document.querySelectorAll('.nav-links a.active').forEach((a) => a.classList.remove('active'));
+          link.classList.add('active');
+        }
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    sectionMap.forEach((_, sec) => navObserver.observe(sec));
+  }
+
+  // ───── Throttled scroll: nav hide/show, progress bar, back-to-top ─────
+  const nav = document.querySelector('.top-nav');
+  const progress = document.querySelector('.scroll-progress');
+  const back = document.querySelector('.back-to-top');
+  let lastScroll = 0;
+  let scheduled = false;
+  function onScroll() {
+    const current = window.pageYOffset || document.documentElement.scrollTop;
+    if (nav) {
+      if (current > lastScroll && current > 200) {
+        nav.style.transform = 'translateY(-100%)';
+        closeMenu();
+      } else {
+        nav.style.transform = 'translateY(0)';
+      }
+    }
+    if (progress) {
+      const total = document.documentElement.scrollHeight - window.innerHeight;
+      const ratio = total > 0 ? Math.min(Math.max(current / total, 0), 1) : 0;
+      progress.style.transform = 'scaleX(' + ratio.toFixed(4) + ')';
+    }
+    if (back) back.classList.toggle('visible', current > 600);
+    lastScroll = current;
+    scheduled = false;
+  }
+  window.addEventListener('scroll', () => {
+    if (!scheduled) {
+      scheduled = true;
+      requestAnimationFrame(onScroll);
+    }
+  }, { passive: true });
+  onScroll();
+
+  // ───── Back-to-top click ─────
+  if (back) {
+    back.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: reduced ? 'auto' : 'smooth' });
+    });
+  }
+
+  // ───── Subtle 3D tilt on cards (desktop hover only) ─────
+  if (!reduced && canHover) {
+    document.querySelectorAll('.edu-card, .contact-item').forEach((card) => {
+      let raf = null;
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = (e.clientX - rect.left) / rect.width - 0.5;
+        const y = (e.clientY - rect.top) / rect.height - 0.5;
+        if (raf) cancelAnimationFrame(raf);
+        raf = requestAnimationFrame(() => {
+          card.style.transform =
+            'perspective(900px) rotateX(' + (-y * 4).toFixed(2) + 'deg) rotateY(' + (x * 4).toFixed(2) + 'deg) translateY(-3px)';
+        });
+      });
+      card.addEventListener('mouseleave', () => {
+        if (raf) cancelAnimationFrame(raf);
+        card.style.transform = '';
+      });
+    });
+  }
+
+  // ───── Magnetic hover on hero meta chips (desktop only) ─────
+  if (!reduced && canHover) {
+    document.querySelectorAll('.meta-chip').forEach((chip) => {
+      let raf = null;
+      chip.addEventListener('mousemove', (e) => {
+        const rect = chip.getBoundingClientRect();
+        const x = (e.clientX - rect.left - rect.width / 2) * 0.18;
+        const y = (e.clientY - rect.top - rect.height / 2) * 0.18;
+        if (raf) cancelAnimationFrame(raf);
+        raf = requestAnimationFrame(() => {
+          chip.style.transform = 'translate(' + x.toFixed(2) + 'px, ' + (y - 2).toFixed(2) + 'px)';
+        });
+      });
+      chip.addEventListener('mouseleave', () => {
+        if (raf) cancelAnimationFrame(raf);
+        chip.style.transform = '';
+      });
+    });
+  }
+
+  // ───── Thread cursor with verlet physics (desktop only) ─────
+  // A chain of point-masses is integrated with verlet, then distance-
+  // constrained between neighbours (Jakobsen) so it behaves like a
+  // taut thread that trails the cursor with weight, momentum and gravity.
+  if (canHover && !reduced && window.matchMedia('(pointer: fine)').matches) {
+    const canvas = document.createElement('canvas');
+    canvas.className = 'thread-cursor-canvas';
+    canvas.setAttribute('aria-hidden', 'true');
+    document.body.appendChild(canvas);
+    const ctx = canvas.getContext('2d');
+
+    let w = 0, h = 0, dpr = 1;
+    function resizeCanvas() {
+      dpr = Math.min(window.devicePixelRatio || 1, 2);
+      w = window.innerWidth;
+      h = window.innerHeight;
+      canvas.width = Math.floor(w * dpr);
+      canvas.height = Math.floor(h * dpr);
+      canvas.style.width = w + 'px';
+      canvas.style.height = h + 'px';
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    }
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+
+    const SEGMENTS = 30;       // chain length
+    const REST = 6.5;          // spring rest length (px)
+    const DAMP = 0.86;         // velocity damping (0–1)
+    const GRAVITY = 0.32;      // px/frame²
+    const FOLLOW = 0.32;       // head smoothing
+    const ITERS = 6;           // constraint relaxation iterations
+
+    const mouse = { x: w / 2, y: h / 2, active: false };
+    const head = { x: w / 2, y: h / 2 };
+    const pts = [];
+    for (let i = 0; i < SEGMENTS; i++) {
+      pts.push({ x: head.x, y: head.y, ox: head.x, oy: head.y });
+    }
+
+    let isHover = false;
+    let hoverScale = 0;
+    let alpha = 0;
+
+    const HOVER_SELECTOR = 'a, button, [data-copy], .chip, .meta-chip, .role-tag, .stat-card, .edu-card';
+
+    window.addEventListener('mousemove', (e) => {
+      mouse.x = e.clientX;
+      mouse.y = e.clientY;
+      mouse.active = true;
+      const t = e.target;
+      isHover = !!(t && t.closest && t.closest(HOVER_SELECTOR));
+    }, { passive: true });
+
+    document.addEventListener('mouseleave', () => { mouse.active = false; });
+    document.addEventListener('mouseenter', () => { mouse.active = true; });
+    window.addEventListener('blur', () => { mouse.active = false; });
+
+    function tick() {
+      // Smooth head toward cursor
+      head.x += (mouse.x - head.x) * FOLLOW;
+      head.y += (mouse.y - head.y) * FOLLOW;
+
+      // Pin first point
+      pts[0].x = head.x;
+      pts[0].y = head.y;
+      pts[0].ox = head.x;
+      pts[0].oy = head.y;
+
+      // Verlet integration on remaining points
+      for (let i = 1; i < SEGMENTS; i++) {
+        const p = pts[i];
+        const vx = (p.x - p.ox) * DAMP;
+        const vy = (p.y - p.oy) * DAMP;
+        p.ox = p.x;
+        p.oy = p.y;
+        p.x += vx;
+        p.y += vy + GRAVITY;
+      }
+
+      // Distance constraints (Jakobsen relaxation)
+      for (let it = 0; it < ITERS; it++) {
+        for (let i = 0; i < SEGMENTS - 1; i++) {
+          const a = pts[i];
+          const b = pts[i + 1];
+          const dx = b.x - a.x;
+          const dy = b.y - a.y;
+          const dist = Math.sqrt(dx * dx + dy * dy) || 0.0001;
+          const diff = (dist - REST) / dist;
+          const ox = dx * 0.5 * diff;
+          const oy = dy * 0.5 * diff;
+          if (i !== 0) {
+            a.x += ox;
+            a.y += oy;
+          }
+          b.x -= ox;
+          b.y -= oy;
+        }
+        // Re-pin head after each iteration so it stays exact
+        pts[0].x = head.x;
+        pts[0].y = head.y;
+      }
+
+      // Smooth state transitions
+      hoverScale += ((isHover ? 1 : 0) - hoverScale) * 0.18;
+      alpha += ((mouse.active ? 1 : 0) - alpha) * 0.14;
+
+      ctx.clearRect(0, 0, w, h);
+      if (alpha < 0.01) {
+        requestAnimationFrame(tick);
+        return;
+      }
+      ctx.globalAlpha = alpha;
+
+      // Thread (smooth quadratic curve through points)
+      ctx.lineCap = 'round';
+      ctx.lineJoin = 'round';
+      ctx.strokeStyle = 'rgba(107, 135, 121, 0.85)';
+      ctx.lineWidth = 1.4;
+      ctx.beginPath();
+      ctx.moveTo(pts[0].x, pts[0].y);
+      for (let i = 1; i < SEGMENTS - 1; i++) {
+        const xc = (pts[i].x + pts[i + 1].x) / 2;
+        const yc = (pts[i].y + pts[i + 1].y) / 2;
+        ctx.quadraticCurveTo(pts[i].x, pts[i].y, xc, yc);
+      }
+      ctx.lineTo(pts[SEGMENTS - 1].x, pts[SEGMENTS - 1].y);
+      ctx.stroke();
+
+      // Loose end — small sage dot
+      const tail = pts[SEGMENTS - 1];
+      ctx.fillStyle = 'rgba(143, 168, 155, 0.6)';
+      ctx.beginPath();
+      ctx.arc(tail.x, tail.y, 1.6, 0, Math.PI * 2);
+      ctx.fill();
+
+      // Needle / head — terracotta dot, grows on hover of interactive things
+      const r = 3.5 + hoverScale * 5;
+      ctx.fillStyle = 'rgba(168, 69, 49, 0.95)';
+      ctx.beginPath();
+      ctx.arc(head.x, head.y, r, 0, Math.PI * 2);
+      ctx.fill();
+
+      // Hover ring
+      if (hoverScale > 0.04) {
+        ctx.strokeStyle = 'rgba(168, 69, 49, ' + (0.45 * hoverScale).toFixed(3) + ')';
+        ctx.lineWidth = 1.2;
+        ctx.beginPath();
+        ctx.arc(head.x, head.y, r + 9 * hoverScale, 0, Math.PI * 2);
+        ctx.stroke();
+      }
+
+      ctx.globalAlpha = 1;
+      requestAnimationFrame(tick);
+    }
+    tick();
+
+    // Hide native cursor only once the custom one is live
+    document.documentElement.classList.add('thread-cursor');
+  }
+})();
+</script>
+
+</body>
+</html>
